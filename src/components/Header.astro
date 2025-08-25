@@ -1,0 +1,45 @@
+---
+import MenuBtn from "../components/MenuBtn.astro";
+const links = ["Home", "New", "Popular", "Trending", "Categories"];
+---
+
+<header>
+	<img src="/logo.svg" alt="logo" />
+    <MenuBtn/>
+	<nav>
+        {
+            links.map(link => <a href="#">{link}</a>)
+        }
+	</nav>
+</header>
+
+<style>
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+        grid-area: header;
+	}
+
+	a {
+		color: #c5c6ce;
+		color: var(--dark-grayish-blue);
+		text-decoration: none;
+	}
+
+    a:hover{
+        color: var(--soft-orange);
+    }
+
+	nav {
+        display: none;
+	}
+
+	@media screen and (width >= 1000px) {
+		nav {
+			display: flex;
+			gap: 30px;
+		}
+	}
+</style>
