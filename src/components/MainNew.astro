@@ -1,0 +1,59 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="mainNew">
+	<img src="/image-web-3-mobile.jpg" class="imageNewMobile" alt="image" />
+	<img src="/image-web-3-desktop.jpg" class="imageNewDesktop" alt="image" />
+	<div class="mainNew__article">
+		<h1 class="titleMainNew">The Bright Future of Web 3.0?</h1>
+		<div class="mainNew__description">
+			<p class="mainNew__text">
+				We dive into the next evolution of the web that claims to put the power
+				of the platforms back into the hands of the people. But is it really
+				fulfilling its promise?
+			</p>
+			<Button />
+		</div>
+	</div>
+</section>
+
+<style>
+	.imageNewMobile {
+		width: 100%;
+	}
+
+	.imageNewDesktop {
+		display: none;
+	}
+
+	.mainNew {
+		grid-area: mainnew;
+	}
+
+	.titleMainNew {
+		font-size: 3em;
+	}
+
+	.mainNew__text {
+		color: var(--dark-grayish-blue);
+        line-height: 1.5em;
+        font-size: 18px;
+	}
+
+	@media screen and (width >= 800px) {
+		.mainNew__article {
+			display: flex;
+			gap:100px;
+		}
+
+		.imageNewMobile {
+			display: none;
+		}
+
+		.imageNewDesktop {
+			display: block;
+			width: 100%;
+		}
+	}
+</style>

@@ -18,12 +18,10 @@ const links = ["Home", "New", "Popular", "Trending", "Categories"];
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1em;
         grid-area: header;
 	}
 
 	a {
-		color: #c5c6ce;
 		color: var(--dark-grayish-blue);
 		text-decoration: none;
 	}
@@ -36,7 +34,7 @@ const links = ["Home", "New", "Popular", "Trending", "Categories"];
         display: none;
 	}
 
-	@media screen and (width >= 1000px) {
+	@media screen and (width >= 800px) {
 		nav {
 			display: flex;
 			gap: 30px;

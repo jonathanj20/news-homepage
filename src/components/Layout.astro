@@ -32,26 +32,29 @@
 	body {
 		background-color: var(--oof-white);
 		display: flex;
-		align-items: center;
 		justify-content: center;
 		height: 100vh;
 	}
 
-	main{
+	main {
 		width: 80%;
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-areas: 
-			"header"
+		grid-template-areas:
+			'header'
+			'mainnew'
+			'news'
 		;
+		gap: 40px;
+		padding: 3em 0;
 	}
-	
-	@media screen and (width >= 1000px){
-		main{
+
+	@media screen and (width >= 800px) {
+		main {
 			grid-template-columns: repeat(3, 1fr);
-			grid-template-areas: 
-				"header header header"
-			;
+			grid-template-areas:
+				'header header header'
+				'mainnew mainnew news';
 		}
 	}
 </style>
