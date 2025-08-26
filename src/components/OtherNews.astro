@@ -1,0 +1,55 @@
+---
+import OtherNew from './OtherNew.astro';
+
+interface otherNew {
+	image: string;
+	title: string;
+	description: string;
+}
+
+const otherNews: otherNew[] = [
+	{
+		image: '/image-retro-pcs.jpg',
+		title: 'Reviving Retro PCs',
+		description: 'What happens when old PCs are given modern upgrades?',
+	},
+	{
+		image: '/image-top-laptops.jpg',
+		title: 'Top 10 Laptops of 2022',
+		description: 'Our best picks for various needs and budgets.',
+	},
+	{
+		image: '/image-gaming-growth.jpg',
+		title: 'The Growth of Gaming',
+		description: 'How the pandemic has sparked fresh opportunities.',
+	},
+];
+---
+
+<section class="otherNews">
+	{
+		otherNews.map((otherNew, index) => (
+			<OtherNew
+				image={otherNew.image}
+				number={index + 1}
+				title={otherNew.title}
+				description={otherNew.description}
+			/>
+		))
+	}
+</section>
+
+<style>
+	.otherNews {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		grid-area: othernews;
+	}
+
+	@media screen and (width >= 800px) {
+        .otherNews{
+            flex-direction: row;
+        }
+	}
+</style>

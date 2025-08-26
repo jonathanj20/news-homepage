@@ -33,18 +33,25 @@ import Button from './Button.astro';
 
 	.titleMainNew {
 		font-size: 3em;
+		margin:0;
 	}
 
 	.mainNew__text {
 		color: var(--dark-grayish-blue);
-        line-height: 1.5em;
-        font-size: 18px;
+		line-height: 1.5em;
+		font-size: 18px;
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.mainNew__article {
+		margin-top: 25px;
 	}
 
 	@media screen and (width >= 800px) {
 		.mainNew__article {
 			display: flex;
-			gap:100px;
+			gap: 100px;
 		}
 
 		.imageNewMobile {
