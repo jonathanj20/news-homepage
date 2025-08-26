@@ -1,0 +1,41 @@
+---
+import New from "./New.astro";
+
+const news = [
+	{
+		title: 'Hydrogen VS Electric Cars',
+		description: 'Will hydrogen-fueled cars ever catch up to EVs?',
+	},
+	{
+		title: 'The Downsides of AI Artistry',
+		description:
+			'What are the possible adverse effects of on-demand AI image generation?',
+	},
+	{
+		title: 'Hydrogen VS Electric Cars',
+		description:
+			'Private funding by VC firms is down 50% YOY. We take a look at what that means.',
+	},
+];
+---
+
+<section class="news">
+	<h2 class="newsTitle">New</h2>
+	{
+		news.map((neww) => <New title={neww.title} description={neww.description} />)
+	}
+</section>
+
+<style>
+	.news {
+		background-color: var(--very-dark-blue);
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.newsTitle {
+		color: var(--soft-orange);
+        font-size: 40px;
+	}
+</style>
