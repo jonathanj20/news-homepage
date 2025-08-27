@@ -1,16 +1,12 @@
 ---
-import MenuBtn from "../components/MenuBtn.astro";
-const links = ["Home", "New", "Popular", "Trending", "Categories"];
+import BtnOpenMenu from "./btnOpenMenu.astro";
+import Nav from "./Nav.astro";
 ---
 
 <header>
 	<img src="/logo.svg" alt="logo" />
-    <MenuBtn/>
-	<nav>
-        {
-            links.map(link => <a href="#">{link}</a>)
-        }
-	</nav>
+	<BtnOpenMenu />
+	<Nav/>
 </header>
 
 <style>
@@ -18,26 +14,6 @@ const links = ["Home", "New", "Popular", "Trending", "Categories"];
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-        grid-area: header;
-	}
-
-	a {
-		color: var(--dark-grayish-blue);
-		text-decoration: none;
-	}
-
-    a:hover{
-        color: var(--soft-orange);
-    }
-
-	nav {
-        display: none;
-	}
-
-	@media screen and (width >= 800px) {
-		nav {
-			display: flex;
-			gap: 30px;
-		}
+		grid-area: header;
 	}
 </style>

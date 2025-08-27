@@ -1,0 +1,31 @@
+<button class="btnMenu btnCloseMenu" id="btnCloseMenu">
+	<img src="/icon-menu-close.svg" alt="closeMenu" />
+</button>
+
+<style>
+	.btnCloseMenu {
+		display: block;
+		width: auto;
+		position: absolute;
+		right: 40px;
+	}
+
+	.btnMenu {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	@media screen and (width >= 800px) {
+		.btnMenu {
+			display: none;
+		}
+	}
+</style>
+
+<script>
+	const nav = document.getElementById('nav') as HTMLElement;
+	const btnCloseMenu = document.getElementById('btnCloseMenu') as HTMLElement;
+
+	btnCloseMenu.addEventListener('click', () => nav.classList.remove('showNav'));
+</script>

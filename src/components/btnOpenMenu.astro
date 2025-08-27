@@ -1,0 +1,28 @@
+<button id="btnOpenMenu" class="btnMenu btnOpenMenu">
+	<img src="/icon-menu.svg" class="icon__menu" alt="menu" />
+</button>
+
+<style>
+	.btnOpenMenu {
+		display: block;
+	}
+
+	.btnMenu{
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	@media screen and (width >= 800px) {
+		.btnOpenMenu {
+			display: none;
+		}
+	}
+</style>
+
+<script>
+	const nav = document.getElementById("nav") as HTMLElement;
+	const btnOpenMenu = document.getElementById("btnOpenMenu") as HTMLElement;
+
+	btnOpenMenu.addEventListener("click", () => nav.classList.add("showNav"));
+</script>
