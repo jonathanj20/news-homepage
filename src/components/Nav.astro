@@ -3,7 +3,7 @@ import BtnCloseMenu from './btnCloseMenu.astro';
 const links = ['Home', 'New', 'Popular', 'Trending', 'Categories'];
 ---
 
-<nav id="nav">
+<nav id="nav" class="nav">
 	<BtnCloseMenu />
 	<div class="links">
 		{links.map((link) => <a href="#">{link}</a>)}
@@ -43,7 +43,7 @@ const links = ['Home', 'New', 'Popular', 'Trending', 'Categories'];
 		color: var(--soft-orange);
 	}
 	@media screen and (width >= 1024px) {
-		nav {
+		.nav {
 			position: static;
 			background-color: transparent;
 			padding: 0;

@@ -26,30 +26,13 @@ const otherNews: otherNew[] = [
 ];
 ---
 
-<section class="otherNews">
-	{
-		otherNews.map((otherNew, index) => (
-			<OtherNew
-				image={otherNew.image}
-				number={index + 1}
-				title={otherNew.title}
-				description={otherNew.description}
-			/>
-		))
-	}
-</section>
-
-<style>
-	.otherNews {
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
-		grid-area: othernews;
-	}
-
-	@media screen and (width >= 1024px) {
-        .otherNews{
-            flex-direction: row;
-        }
-	}
-</style>
+{
+	otherNews.map((otherNew, index) => (
+		<OtherNew
+			image={otherNew.image}
+			number={index + 1}
+			title={otherNew.title}
+			description={otherNew.description}
+		/>
+	))
+}
