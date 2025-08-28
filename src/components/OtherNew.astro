@@ -12,7 +12,7 @@ const { image, number, title, description } = Astro.props;
 <div class="othernew">
 	<img src={image} alt="image" class="othernew__image" />
 	<div class="information">
-		<p class="othernew__number">{"0" + number.toString()}</p>
+		<p class="othernew__number">{'0' + number.toString()}</p>
 		<h3 class="othernew__title">{title}</h3>
 		<p class="othernew__description">{description}</p>
 	</div>
@@ -26,14 +26,14 @@ const { image, number, title, description } = Astro.props;
 
 	.othernew__image {
 		width: 110px;
-		height: 150px;
+		height: 100%;
 	}
 
-    .information{
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
+	.information {
+		display: flex;
+		flex-direction: column;
+		gap: 5%;
+	}
 
 	.othernew__number {
 		color: var(--soft-red);
@@ -55,7 +55,15 @@ const { image, number, title, description } = Astro.props;
 		color: var(--dark-grayish-blue);
 	}
 
-    .othernew__description, .othernew__title, .othernew__number{
-        margin: 0;
-    }
+	.othernew__description,
+	.othernew__title,
+	.othernew__number {
+		margin: 0;
+	}
+
+	@media screen and (width => 1024px) {
+		.othernew {
+			width: 355px;
+		}
+	}
 </style>
