@@ -7,7 +7,7 @@
 		display: block;
 	}
 
-	.btnMenu{
+	.btnMenu {
 		background-color: transparent;
 		border: none;
 		cursor: pointer;
@@ -21,8 +21,12 @@
 </style>
 
 <script>
-	const nav = document.getElementById("nav") as HTMLElement;
-	const btnOpenMenu = document.getElementById("btnOpenMenu") as HTMLElement;
+	const nav = document.getElementById('nav') as HTMLElement;
+	const blackBox = document.getElementById('blackBox') as HTMLElement;
+	const btnOpenMenu = document.getElementById('btnOpenMenu') as HTMLElement;
 
-	btnOpenMenu.addEventListener("click", () => nav.classList.add("showNav"));
+	btnOpenMenu.addEventListener('click', () => {
+		nav.classList.add('showNav');
+		blackBox.classList.add('showBlackBox');
+	});
 </script>
