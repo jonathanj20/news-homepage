@@ -6,12 +6,12 @@ const links = ['Home', 'New', 'Popular', 'Trending', 'Categories'];
 <nav id="nav" class="nav">
 	<BtnCloseMenu />
 	<div class="links">
-		{links.map((link) => <a href="#">{link}</a>)}
+		{links.map((link) => <a href="#" class="link">{link}</a>)}
 	</div>
 </nav>
 
 <style>
-	nav {
+	.nav {
 		position: fixed;
 		right: -100%;
 		top: 0;
@@ -34,12 +34,12 @@ const links = ['Home', 'New', 'Popular', 'Trending', 'Categories'];
 		margin-top: 90px;
 	}
 
-	a {
+	.link {
 		color: var(--dark-grayish-blue);
 		text-decoration: none;
 	}
 
-	a:hover {
+	.link:hover {
 		color: var(--soft-orange);
 	}
 	@media screen and (width >= 1024px) {
